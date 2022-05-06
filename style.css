@@ -1,0 +1,95 @@
+/* seletor universal -> pega todos os elementos da pagina */
+* {
+    margin: 0;
+    /* Fixa o valor da borta nao evitando
+    que a borda aumente de tamanho em função
+    de um paddind por exemplo
+    fixando assim nos 375px que eu passei 
+    no hearder */
+    box-sizing: border-box;
+}
+
+:root {
+    /*  1rem = 10px */
+    font-size: 62.5%;
+
+    --primary-color: hsl(170, 100%, 26%);
+    --headline: hsl(210, 11%, 15%);
+    --paragraph: hsl(210, 9%, 31%);
+}
+
+/* Para a fonta funcionar eu precisei importar no html */
+/* Body porque essa letra é a mesma pra todo o codigo */
+body {
+    font-family: 'DM Sans';
+    /* equivalente a 16px */
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+header {
+    /* equivalente a 375px */
+    width: 37.5rem;
+    /* Preencha automaticamente */
+    margin-left: auto;
+    margin-right: auto;
+    /* equivalente a 41px */
+    margin-top: 4.1rem;
+
+}
+
+/* o px é uma unidade fixa. Se o user mudar o tamanho por acessibilidade, não muda. 
+Vai permancer 14px */
+h4 {
+    /* equivalente a 14px */
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.6rem;
+}
+
+h1 {
+    font-size: 3.4rem;
+    color: var(--headline);
+    line-height: 130%;
+
+    margin-bottom: 2.4rem;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--paragraph);
+    margin-bottom: 3.2rem;
+}
+
+button {
+    background: var(--primary-color);
+
+    border: none;
+    border-radius: 4rem;
+
+    margin-bottom: 6rem;
+
+    height: 6.2rem;
+    width: 23.3rem;
+
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+/* display block e inline mexem com as
+caixas ao redor  */
+/* flex mexe com os filhos, com os elementos
+que existem dentro*/
+/* o flex pega os elementos e os tornam
+flexiveis para alteração  destravando algumas
+opções de modificação*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+
+    margin-left: auto;
+    margin-right: auto;
+}
